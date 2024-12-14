@@ -1,3 +1,9 @@
 # .gitignore
 .env
 data/
+autoencoder.keras
+clusters.npy
+combined_features.npy
+embeddings.npy
+data.csv
+latlong_scaled.npy
