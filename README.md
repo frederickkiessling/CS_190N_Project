@@ -26,3 +26,49 @@ WiFi Data Columns
 	7.	avg_ping_rtt (ms): avg round-trip time in milisecs -> gives a general sense of latency.
 	8.	max_ping_rtt (ms): Maximum round-trip time in milisecs -> captures worst-case latency.
 	9.	mdev_ping_rtt (ms): Mean deviation of round-trip times -> shows us variability in network latency.
+
+
+# Instructions to Reproduce the Code:
+
+
+The data we used can be downloaded using these commands (adjust to where data is stored on your computer):
+
+wifistats_df = pd.read_csv("./data/wifistats.csv")
+extra_info_df = pd.read_csv("./data/extra_info.csv")
+devices_df = pd.read_csv("./data/devices.csv")
+df = pd.merge(wifistats_df, extra_info_df, on="label", how="inner")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
