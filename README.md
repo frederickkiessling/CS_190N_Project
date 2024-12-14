@@ -42,7 +42,7 @@ This data is collected from the PINOT infrastructure, which consists of ~70 Rasp
 Each raspberry pi device is connected to a wireless network (UCSB Wireless Web) and run measurements every several minutes. These measurements include collecting wifi statistics information (signal strength, tx/rx bitrate, etc) and running ping to the UCSB gateway router. The source code of the measurements is available here: https://github.com/SNL-UCSB/PINOT-UCSB-WiFi-watcher. All measurements (with a corresponding timestamp) are available in the PostgreSQL database.
 The database stores measurements in a raw (unparsed) form. Currently, we have 4.4mln measurements, earliest starting on April 2023. The database is available at pinot.cs.ucsb.edu, port 5432. Please, use pgAdmin to connect to the database. The table with data is located in db pinot, public schema, table wifistats. I will send credentials per group as a separate email to you.
 
-To plot and filter the data run these functions defined in Cory/time_plots.ipynb:
+To plot and filter the data run these functions defined in CZ/time_plots.ipynb:
 
 ```python
 def plot_within_hour(df, year, month, day, hour, metric, devices):
@@ -51,9 +51,20 @@ def plot_within_month(df, year, month, metric, devices):
 ```
 
 
+# Database connection
+The database connection is given in the file: CZ/db_query.ipynb
+
+To run freddiekiessling/FK_work.ipynb file:
+  use the credentials.csv file in freddiekiessling/
+
+
+# Running CZ/time_plots.ipynb and freddiekiessling/FK_work.ipynb
+
+Given the database connection run the 2 files to get all the graphs and table data used in our final paper
 
 
 
+# Model Code:
 
 
 
